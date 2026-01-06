@@ -1,0 +1,104 @@
+═══════════════════════════════════════════════════════════════
+   ABI DIAMOND - PREMIUM JEWELLERY WEBSITE
+   Quick Start Guide (60 Seconds)
+═══════════════════════════════════════════════════════════════
+
+📦 INSTALLATION
+───────────────────────────────────────────────────────────────
+
+1. Open Terminal in this folder
+
+2. Install dependencies:
+   npm install
+
+3. Start development server:
+   npm run dev
+
+4. Open browser:
+   http://localhost:3000
+
+✅ Done! Your premium jewellery website is running!
+
+═══════════════════════════════════════════════════════════════
+
+🎨 FIRST CUSTOMIZATIONS
+───────────────────────────────────────────────────────────────
+
+1. UPDATE LOGO
+   → Edit: components/Header.tsx (Line 40)
+   → Add your logo to: /public/logo.png
+
+2. WHATSAPP NUMBER
+   → Edit: components/WhatsAppButton.tsx (Line 7)
+   → Change: +491234567890 to your number
+
+3. CONTACT INFO
+   → Edit: components/Footer.tsx (Lines 55-65)
+   → Update address, phone, email
+
+4. ADD PRODUCTS
+   → Edit: components/ProductListing.tsx (Lines 8-90)
+   → Replace sample products with your data
+
+5. CHANGE COLORS
+   → Edit: tailwind.config.js (Lines 12-35)
+   → Modify gold, champagne colors
+
+═══════════════════════════════════════════════════════════════
+
+🚀 DEPLOYMENT (VERCEL - RECOMMENDED)
+───────────────────────────────────────────────────────────────
+
+1. Push code to GitHub
+
+2. Go to: vercel.com
+
+3. Click: "Import Project"
+
+4. Select your repository
+
+5. Click: "Deploy"
+
+✅ Live in 2 minutes!
+
+═══════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION
+───────────────────────────────────────────────────────────────
+
+README.md                    - Full project overview
+DESIGN_DOCUMENTATION.md      - Complete design system
+SETUP_GUIDE.md              - Detailed setup instructions
+PROJECT_SUMMARY.md          - Delivery overview
+
+═══════════════════════════════════════════════════════════════
+
+✨ FEATURES INCLUDED
+───────────────────────────────────────────────────────────────
+
+✅ Premium Header with Navigation
+✅ Hero Banner Carousel (3 slides)
+✅ Shop by Category (7 categories)
+✅ Featured Collections
+✅ Aadi Festival Offer with Countdown
+✅ Product Listing (8 products)
+✅ Product Detail Page
+✅ Offers Page
+✅ Footer with Newsletter
+✅ WhatsApp Floating Button
+✅ Fully Responsive Design
+✅ Euro (€) Currency
+✅ Premium Animations
+
+═══════════════════════════════════════════════════════════════
+
+💡 NEED HELP?
+───────────────────────────────────────────────────────────────
+
+Read: SETUP_GUIDE.md for detailed instructions
+
+═══════════════════════════════════════════════════════════════
+
+Happy Selling! 💎✨
+
+═══════════════════════════════════════════════════════════════

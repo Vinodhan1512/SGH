@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold-primary: #D4AF37;
+    --color-gold-light: #F5E6C8;
+    --color-champagne: #F5F0E6;
+    --color-ruby: #DC2626;
+    --color-emerald: #059669;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-white via-amber-50/20 to-white text-gray-900 font-sans;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-white font-bold rounded-xl hover:from-amber-700 hover:via-yellow-600 hover:to-amber-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border-2 border-amber-400;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-white text-amber-800 font-bold rounded-xl border-2 border-amber-500 hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .heading-primary {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight;
+  }
+
+  .heading-secondary {
+    @apply text-3xl md:text-4xl font-display font-semibold text-gray-900;
+  }
+
+  .heading-tertiary {
+    @apply text-2xl md:text-3xl font-serif font-semibold text-gray-800;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4AF37, #B8941F);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #B8941F, #9A7A19);
+}
+
+/* Premium hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hover-zoom {
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Gold shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(to right, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
