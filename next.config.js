@@ -4,8 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/SGH',
-  assetPrefix: '/SGH/',
+  // Only use basePath for production builds (GitHub Pages)
+  // For local development, comment out or remove basePath
+  // basePath: '/SGH',
+  // assetPrefix: '/SGH/',
 }
 
 module.exports = nextConfig
