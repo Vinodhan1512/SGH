@@ -521,6 +521,37 @@ export class LicenseManager {
   }
 
   /**
+   * Auto-activate demo trial on first launch
+   * This is for demo/evaluation purposes - automatically grants 30-day trial
+   */
+  async autoActivateDemoTrial(): Promise<LicenseValidationResult> {
+    // Check if license already exists
+    if (this.storedLicense) {
+      return this.validate();
+    }
+
+    // Generate demo trial key (30 days)
+    const trialKey = this.generateTrialKey();
+
+    // Auto-activate with demo user info
+    const result = await this.activate(
+      trialKey,
+      'Demo User',
+      'demo@securesign.pro',
+      'SecureSign Demo'
+    );
+
+    return result;
+  }
+
+  /**
+   * Check if this is a fresh install (no license)
+   */
+  isFreshInstall(): boolean {
+    return this.storedLicense === null;
+  }
+
+  /**
    * Generate a trial license key
    */
   private generateTrialKey(): string {

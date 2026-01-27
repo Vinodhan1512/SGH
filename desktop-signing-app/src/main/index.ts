@@ -197,6 +197,14 @@ async function initializeApp(): Promise<void> {
   licenseManager = createLicenseManager(appDataPath, machineId);
   pdfEngine = createPdfEngine();
 
+  // AUTO-ACTIVATE DEMO TRIAL LICENSE (30 days)
+  // This is for demo/evaluation purposes
+  if (licenseManager.isFreshInstall()) {
+    console.log('First launch detected - activating 30-day demo trial...');
+    await licenseManager.autoActivateDemoTrial();
+    console.log('Demo trial activated successfully!');
+  }
+
   // Log application start
   await auditLogger.logApplicationStart(machineId, APP_CONFIG.VERSION);
 }
